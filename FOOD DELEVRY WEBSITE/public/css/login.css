@@ -274,7 +274,7 @@ aside {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
     gap: 30px;
     transition: 0.5s;
     color: white;
@@ -289,7 +289,7 @@ aside {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 130px;
+    margin-top: 40px;
     position: relative;
     top: -35rem;
     left: 400px;
@@ -312,6 +312,9 @@ aside {
 
 
 
+}
+.input option{
+    color: black;
 }
 
 input::placeholder {

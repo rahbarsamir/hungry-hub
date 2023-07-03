@@ -29,6 +29,10 @@ const schema = db.Schema({
         unique: true
 
     },
+    rank:{
+        type:String,
+        require:true
+    },
     password: {
         type: String,
         required: true

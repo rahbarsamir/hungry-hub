@@ -23,6 +23,7 @@ const tot=total.innerHTML;
 if(tot==0){
   console.log("zero")
   section.classList.add("dis-block")
+  main.classList.add("empty-cart")
   localStorage.removeItem('targetTime')
 
 }
@@ -67,10 +68,41 @@ const countdown = setInterval(() => {
 }
 
 const cancel=()=>{
+  // const data={
+
+  // }
+  localStorage.removeItem('targetTime');
+
+  orderC()
+
+  // fetch('/cancel', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(data)
+  // })
+  //   .then(response => {
+  //     console.log('Data sent successfully');
+  //     window.location.href = "http://localhost:1111/";
+  //     alert("removed")
+  //   })
+  //   .catch(error => {
+  //     console.error('Error sending data:', error);
+      
+  //   });
+  
+    
+
+}
+
+
+
+
+function orderC(){
   const data={
 
   }
-  localStorage.removeItem('targetTime');
 
   fetch('/cancel', {
     method: 'POST',
@@ -81,20 +113,14 @@ const cancel=()=>{
   })
     .then(response => {
       console.log('Data sent successfully');
+      window.location.href = "http://localhost:1111/";
+      alert("removed")
     })
     .catch(error => {
       console.error('Error sending data:', error);
       
     });
-    alert("cancel")
-    window.location.href = "http://localhost:1111/";
-
 }
-
-
-
-
-
 
 
 

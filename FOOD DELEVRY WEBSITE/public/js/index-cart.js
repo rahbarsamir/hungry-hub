@@ -16,6 +16,8 @@ const tot=total.innerHTML;
 if(tot==0){
   console.log("iffffffff")
   section.classList.add("dis-block")
+  main.classList.add("empty-cart")
+
 }
 
 theme.addEventListener('click', () => {
@@ -101,6 +103,33 @@ const minus = (price, id, name) => {
   }
 }
 
+const remove=(name)=>{
+  console.log(name)
+  const data={
+    name:name
+  }
+  fetch('/remove-cart', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+    .then(response => {
+      console.log('Data sent successfully');
+      window.location.href = "http://localhost:1111/cart";
+      response.status(200)
+    })
+    .catch(error => {
+      console.error('Error sending data:', error);
+      
+    });
+
+}
+
+
+
+
 var latLng
 var lat=0;
 var lng=0;
@@ -114,7 +143,6 @@ function initMap() {
   map.setTilt(45);
 
   map.addListener('click', function (e) {
-    // if the previousMarker exists, remove it
     if (previousMarker)
       previousMarker.setMap(null);
 
@@ -124,7 +152,7 @@ function initMap() {
     console.log(e.latLng.lat());
     console.log(e.latLng.lng());
 
-    //image = clientURL + "/common/images/markers/red.png";
+
     console.log("Marker");
     previousMarker = new google.maps.Marker({
       position: latLng,
@@ -176,14 +204,15 @@ const order = () => {
     body: JSON.stringify(data)
   })
     .then(response => {
-      console.log('Data sent successfully');
+      console.log('Data sent successfully=====>',response);
+      window.location.href = "http://localhost:1111/order";
+      localStorage.removeItem("targetTime");
     })
     .catch(error => {
       console.error('Error sending data:', error);
       
     });
-    window.location.href = "http://localhost:1111/order";
-    localStorage.removeItem("targetTime");
+   
   }
   else{
     alert("PLEACE ADD YOUR LOCATION:-")

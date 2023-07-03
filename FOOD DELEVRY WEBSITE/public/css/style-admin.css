@@ -107,28 +107,30 @@ aside {
 
 }
 
-.sideitem div {
+.sideitem a {
+    text-decoration: none;
+    color: var(--color-dark);
     display: flex;
     position: relative;
     margin-left: 20px;
     padding-left: 20px;
     transition: all 100ms ease;
-    margin-bottom: 2rem;
     align-items: center;
     gap: 20px;
-    height: 3rem;
+    /* border-radius: 0 50px 5px 0; */
+    height: 3.5rem;
     width: 11.5rem;
     cursor: pointer;
 }
 
-.sideitem div.active {
+.sideitem a.active {
     background-color: rgba(132, 139, 200, 0.18);
     font-weight: 500;
     color: #7380ec;
 
 }
 
-.sideitem div.active:before {
+.sideitem a.active:before {
     content: '';
     height: 100%;
     width: 6px;
@@ -136,16 +138,16 @@ aside {
     margin-left: -25px;
 }
 
-.sideitem div:hover {
+.sideitem a:hover {
 
     font-weight: 500;
     color: #7380ec;
 }
 
-.sideitem div:last-child {
+.sideitem a:last-child {
 
-    bottom: 1px;
-    position: absolute;
+   bottom: 1px;
+   position: absolute;
 
 }
 
@@ -255,6 +257,7 @@ main {
 
 
 .restaurant .xx a img {
+    object-fit: cover;
     height: 100%;
     width: 100%;
     border-radius: 3px;

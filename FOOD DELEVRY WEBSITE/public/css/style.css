@@ -84,6 +84,9 @@ aside {
 
 
 }
+.img-logo{
+    height: 60px;
+}
 
 .logo {
     transition: all 500ms ease;
@@ -286,6 +289,7 @@ aside {
 
 .restaurant .xx a img {
     height: 100%;
+    object-fit: cover;
     width: 100%;
     border-radius: 3px;
 
@@ -648,7 +652,8 @@ body {
 
     }
 
-
+   
+    
 
     .restaurant .xx a img {
         margin-left: 10px;

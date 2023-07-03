@@ -80,6 +80,12 @@ const schema = db.Schema({
     }],
     total:{
         type:Number
+    },
+    lat:{
+        type:String
+    },
+    lng:{
+        type:String
     }
 
 

@@ -46,7 +46,29 @@ const createing=()=>{
     foood.appendChild(item);
   }
 
-
+  const remove=()=>{
+    console.log("called")
+    // const data={
+    //   name:name
+    // }
+    // // fetch('/remove-cart', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(data)
+    // })
+    //   .then(response => {
+    //     console.log('Data sent successfully');
+    //     window.location.href = "http://localhost:1111/cart";
+    //     response.status(200)
+    //   })
+    //   .catch(error => {
+    //     console.error('Error sending data:', error);
+        
+    //   });
+  
+  }
 
 
 

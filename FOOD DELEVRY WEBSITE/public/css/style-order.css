@@ -184,6 +184,8 @@ aside {
 
 /* end of side bar */
 .main {
+    position: fixed;
+    overflow: scroll;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -198,7 +200,7 @@ aside {
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-stroke: 0.1px black;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     align-items: center;
     font-size: 35px;
     display: flex;
@@ -214,7 +216,7 @@ aside {
 
 .section {
     display: flex;
-    height: 100%;
+    height: auto;
 }
 
 .restaurants {
@@ -256,6 +258,7 @@ aside {
 
 .restaurants .mainimg img {
     width: 100%;
+    object-fit: cover;
     border-radius: 2px;
     height: 100%;
 }
@@ -294,7 +297,7 @@ aside {
 }
 
 .menu {
-
+    margin-bottom: 100px;
     width: 50%;
     font-family: 'Lato', sans-serif;
     font-family: 'Mukta', sans-serif;
@@ -302,6 +305,13 @@ aside {
     padding-top: 80px;
     justify-content: center;
 
+}
+.empty-cart{
+    background: url(cart3.png);
+    background-position: center;
+    background-size:50%;
+    background-repeat: no-repeat;
+    background-color: white;
 }
 
 .cartlist {
@@ -500,6 +510,7 @@ input.qtyminus {
 
 .pic img {
     width: 100%;
+    object-fit: cover;
     height: 100%;
 }
 

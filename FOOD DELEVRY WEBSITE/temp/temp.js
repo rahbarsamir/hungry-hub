@@ -8,6 +8,7 @@ try {
         lName:"samir",
         email:"rahbarsamir@gmail.com",
         phoneNumber:9064010758,
+        rank:"admin",
         password:"sam2025"
     })
     await temp.save()
